@@ -1,0 +1,35 @@
+{
+	"name": "@fdgt/monitor",
+	"main": "index.js",
+	"version": "0.0.1",
+	"license": "MIT",
+	"engines": {
+		"node": "14.x"
+	},
+	"bin": {
+		"fdgt": "./index.js"
+	},
+	"scripts": {
+		"dev": "DEBUG=true nodemon --exec babel-node index.js",
+		"start": "node index.js",
+		"test": "mocha --recursive --require dotenv/config --require @babel/register"
+	},
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"ians-logger": "^0.1.1",
+		"irc-message": "^3.0.2",
+		"isomorphic-fetch": "^2.2.1",
+		"ws": "^7.2.5"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.10.1",
+		"@babel/node": "^7.10.1",
+		"@babel/plugin-proposal-class-properties": "^7.10.1",
+		"@babel/preset-env": "^7.10.1",
+		"@babel/register": "^7.10.1",
+		"chai": "^4.2.0",
+		"mocha": "^7.2.0",
+		"nodemon": "^2.0.3",
+		"sinon": "^9.0.2"
+	}
+}
